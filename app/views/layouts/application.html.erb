@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Hello world in <%= yield(:title) %> </title>
+    <title> <%= yield(:title) %> </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <p>
-        <%= link_to 'ENG', home_path %>  <%= link_to 'FR', fr_path %>    <%= link_to 'RUS', rus_path %>
+        <%= link_to 'Quote Generator', quote_generator_path %>
+    </p>
+    <p>
+        <%= link_to 'Hello World in ENG', home_path %>
+    </p>
+    <p>
+       <%= link_to 'Hello World in FR', fr_path %>
+    </p>
+    <p>
+       <%= link_to 'Hello World in RUS', rus_path %>
     </p>
   </head>
 
