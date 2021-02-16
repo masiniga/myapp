@@ -21,4 +21,11 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Hello world in RUS"
   end
+
+  test "should get Quote Generator" do
+    get quote_generator_path
+    assert_response :success
+    assert_select "title", "Quote Generator"
+  end
+
 end
