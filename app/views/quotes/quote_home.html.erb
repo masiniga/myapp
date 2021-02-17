@@ -1,0 +1,9 @@
+<% provide(:title, "Quote Generator: Multiple Languages") %>
+<h1>Quote Generator: Multiple Languages</h1>
+
+<p> <%= @somequote.content %> </p>
+<p>- <%= @somequote.author %> (<%= @somequote.language %>)</p>
+<p> <%= link_to 'New Quote', quote_home_path %> </p>
+<p style="color:Gray"> <small> English quotes are taken from https://quotesnsmiles.com/quotes/77-of-the-worlds-most-popular-quotes/. </small></p>
+<p style="color:Gray"> <small> French quotes are taken from https://www.mon-poeme.fr/proverbes-francais-celebres/. </small></p>
+<p style="color:Gray"> <small> Russian quotes are taken from https://russianpodcast.eu/famous-russian-quotes.html. </small></p>

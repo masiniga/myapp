@@ -1,0 +1,11 @@
+<% provide(:title, "Quotes List") %>
+<h1>Quotes List</h1>
+
+<ul>
+
+<% @myquotes.each do | quote | %>
+
+<li><%= quote.content %> - <%=quote.author%> (<%=quote.language%>) </li>
+<% end %>
+
+</ul>
