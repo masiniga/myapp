@@ -1,5 +1,23 @@
 class QuotesController < ApplicationController
 
+  def form
+    @quote = Quote.new
+  end
+  def create
+    @quote = Quote.new
+    @quote.content = params[:quote][:content]
+    @quote.author = params[:quote][:author]
+    @quote.language = params[:quote][:language]
+    puts params[:quote]
+    if @quote.save
+      puts "new quote created"
+      redirect_to form_path, notice: "New quote created."
+    else
+      redirect_to form_path, notice: "Error creating user."
+    end
+  end
+
+
   def quote_home
       quotes_list = Quote.all
 
