@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ body{
+   font-family: 'Trebuchet MS', sans-serif;
+   background-color: white;
+   color: black;
+   text-align:center;
+ }
+ h1{
+   color:teal;
+ }
+ p {
+  margin-right: 100px;
+  margin-left: 100px;
+  font-size: 20px;
+}
+.my_button{
+  background-color: teal; /* Green */
+  border: none;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title> <%= yield(:title) %> </title>
@@ -8,15 +9,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <p>
-       <%= link_to 'Add Quote', form_path %>|
-        <%= link_to 'Generate a Quote in English', quote_generator_path %>|
-       <%= link_to 'Generate a Quote in Multiple Languages', quote_home_path %>|
-       <%= link_to 'List of Available Quotes', index_path %>|
-        <%= link_to 'Hello World: ENG', home_path %>|
-       <%= link_to 'Hello World: FR', fr_path %>|
-       <%= link_to 'Hello World: RUS', rus_path %>
-    </p>
+    <h1 > Quote Generator </h1>
+    <%= button_to "About", about_path, method: :get, form: {style: 'display:inline-block;'}, class: 'my_button', :title=>"Click here to learn about this website."%>
+    <%= button_to "Generate Quote", quote_home_path, method: :get, form: {style: 'display:inline-block;'},class: 'my_button',  :title=>"Click here to generate a quote." %>
+    <%= button_to "Add Quote", form_path, method: :get, form: {style: 'display:inline-block;'}, class: 'my_button', :title=>"Click here to add a quote." %>
+    <%= button_to "Quotes List", index_path, method: :get, form: {style: 'display:inline-block;'}, class: 'my_button', :title=>"Click here to see the entire database of quotes." %>
   </head>
 
   <body>
